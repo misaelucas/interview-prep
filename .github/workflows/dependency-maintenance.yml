@@ -1,0 +1,55 @@
+name: Dependency maintenance
+
+on:
+  schedule:
+    - cron: "0 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  npm-dependency-maintenance:
+    name: Check and update npm dependencies
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Apply safe dependency updates
+        run: |
+          npm update
+          npm audit fix || true
+
+      - name: TypeScript check
+        run: npm run check
+
+      - name: Create dependency update pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Update npm dependencies"
+          title: "Update npm dependencies"
+          body: |
+            Daily dependency maintenance.
+
+            This PR was generated automatically after running:
+
+            - `npm update`
+            - `npm audit fix` without forcing breaking changes
+            - `npm run check`
+
+            It intentionally does not use `npm audit fix --force`, so breaking dependency updates should still be reviewed manually.
+          branch: chore/npm-dependency-maintenance
+          delete-branch: true
