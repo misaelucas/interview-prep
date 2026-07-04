@@ -1,0 +1,17 @@
+{
+  "name": "interview-prep-day-1",
+  "version": "1.0.0",
+  "description": "Day 1 coding interview practice: Big O, arrays, strings, Set/Map optimization.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.12",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  }
+}
