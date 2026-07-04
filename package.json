@@ -1,7 +1,7 @@
 {
-  "name": "interview-prep-day-1",
+  "name": "interview-prep",
   "version": "1.0.0",
-  "description": "Day 1 coding interview practice: Big O, arrays, strings, Set/Map optimization.",
+  "description": "Long-term coding interview preparation workspace.",
   "type": "module",
   "private": true,
   "scripts": {

@@ -1,5 +1,5 @@
 /**
- * Do not open before attempting the exercises.
+ * Do not open this file before attempting the exercises.
  *
  * Reference solutions for array exercises.
  */

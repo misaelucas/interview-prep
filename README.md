@@ -1,8 +1,25 @@
-# Interview Prep Day 1
+# Interview Prep
 
-Day 1 focuses on Big O, arrays, strings, and improving brute force `O(n^2)` solutions into `O(n)` solutions with `Set` and `Map`.
+This is a long-term coding interview preparation repository. It is organized by phases and days so each topic has study material, examples, exercises, tests, hints, and reference solutions.
 
-The goal is to identify patterns, explain complexity, and improve brute force solutions only when the tradeoff makes sense. This is a deliberate practice repo: the exercise files contain TODOs, the tests fail first, and hints live outside the implementation files.
+The repo is designed for studying first, then practicing. Exercise implementations intentionally start as TODOs, and tests are expected to fail until the exercises are solved.
+
+## Structure
+
+- `phases/`: roadmap phases and daily study plans.
+- `notes/`: global notes that apply across multiple phases.
+- `phases/phase-1-cs-refresh/day-1-big-o-arrays-strings/`: current focus area.
+
+## Workflow
+
+1. Study the lesson.
+2. Read examples.
+3. Answer quiz.
+4. Solve exercises.
+5. Run tests.
+6. Explain solution out loud.
+7. Log mistakes.
+8. Commit progress.
 
 ## Commands
 
@@ -13,34 +30,8 @@ npm run test:watch
 npm run check
 ```
 
-## Recommended Workflow
+## Current Focus
 
-1. Read the problem.
-2. Write the brute force version first.
-3. Analyze Big O for time and space.
-4. Improve using `Set` or `Map` when appropriate.
-5. Run tests.
-6. Explain the solution out loud.
-7. Write mistakes in `notes/mistakes-log.md`.
+Phase 1: Computer Science Refresh
 
-## Where To Work
-
-- Exercises: `src/exercises`
-- Tests: `src/tests`
-- Hints: `src/hints`
-- Reference solutions: `src/reference-solutions`
-
-Do not open `src/reference-solutions` before attempting the exercises.
-
-## Suggested First Exercise Order
-
-1. `hasDuplicateBruteForce`
-2. `hasDuplicateOptimized`
-3. `containsDuplicateBruteForce`
-4. `containsDuplicateOptimized`
-5. `twoSumBruteForce`
-6. `twoSumOptimized`
-7. `isValidAnagram`
-8. `validAnagramMap`
-9. `isPalindrome`
-10. `validPalindrome`
+Day 1: Big O, Arrays, Strings, Set/Map Optimization
